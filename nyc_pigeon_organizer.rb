@@ -1,5 +1,4 @@
 require 'pry'
-=begin
 pigeon_data = {
   :color => {
     :purple => ["Theo", "Peter Jr.", "Lucky"],
@@ -18,7 +17,6 @@ pigeon_data = {
     "City Hall" => ["Andrew"]
   }
 }
-=end
 def get_attr_values(data,attr,name = "")
   if attr == "name"
     names = data.values.map do |keys|
@@ -46,3 +44,4 @@ def nyc_pigeon_organizer(data)
   end
   new_hash
 end
+
