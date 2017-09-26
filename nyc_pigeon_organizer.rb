@@ -47,7 +47,7 @@ end
 
 
 def nyc_pigeon_organizer2(data)
-  data.each_with_object([]) do |(key,hash),result|
+  data.each_with_object({}) do |(key,hash),result|
     hash.each do |attr,names|
       names.each do |name|
         result = name[attr]
