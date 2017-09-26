@@ -46,7 +46,7 @@ def nyc_pigeon_organizer(data)
 end
 
 
-def nyc_pigeon_organizer2(pigeon_data)
+def nyc_pigeon_organizer2(data)
   data.each_with_object({}) do |(key, h), result|
     binding.pry
     h.each do |value, names|
@@ -58,3 +58,5 @@ def nyc_pigeon_organizer2(pigeon_data)
     end
   end
 end
+
+nyc_pigeon_organizer2(pigeon_data)
