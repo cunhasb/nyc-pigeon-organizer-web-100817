@@ -47,14 +47,16 @@ end
 
 
 def nyc_pigeon_organizer2(data)
-  data.each_with_object([]) do |(key,hash),result|
-    hash.each do |attr,names|
+  data.each_with_object({}) do |(keys,hash),result|
+    keys.each do |attr,names|
       names.each do |name|
-        result = name
-        binding.pry
-      end
+      result[name] ||= {}
+      result[name][keys] ||= []
+      result[name][keys] << attr.to_s
     end
   end
 end
+end
 
-nyc_pigeon_organizer2(pigeon_data)
+  
+
